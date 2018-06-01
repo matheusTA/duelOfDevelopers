@@ -112,11 +112,11 @@ public class TelaPergunta extends JFrame {
 		if (opcaoA == null && opcaoB == null) {
 
 			opcaoA = new JLabel(new ImageIcon(opcoes[0].getImagem()));
-			opcaoA.setBounds(10, 127, 315, 431);
+			opcaoA.setBounds(10, 127, 450, 450);
 			contentPane.add(opcaoA);
 
 			opcaoB = new JLabel(new ImageIcon(opcoes[1].getImagem()));
-			opcaoB.setBounds(457, 127, 315, 431);
+			opcaoB.setBounds(457, 127, 450, 450);
 			contentPane.add(opcaoB);
 
 		} else {

@@ -49,7 +49,7 @@ public class TelaMenu extends JFrame implements Serializable {
             }
         });
         btnJogar.setFont(new Font("Bahnschrift", Font.PLAIN, 20));
-        btnJogar.setBounds(307, 152, 158, 48);
+        btnJogar.setBounds(307, 197, 171, 48);
         contentPane.add(btnJogar);
 
         JButton btnCriarJogador = new JButton("Criar jogador");
@@ -59,7 +59,7 @@ public class TelaMenu extends JFrame implements Serializable {
             }
         });
         btnCriarJogador.setFont(new Font("Bahnschrift", Font.PLAIN, 20));
-        btnCriarJogador.setBounds(307, 211, 171, 48);
+        btnCriarJogador.setBounds(307, 257, 171, 48);
         contentPane.add(btnCriarJogador);
 
         JButton btnSair = new JButton("Sair");
@@ -69,7 +69,7 @@ public class TelaMenu extends JFrame implements Serializable {
             }
         });
         btnSair.setFont(new Font("Bahnschrift", Font.PLAIN, 20));
-        btnSair.setBounds(307, 270, 171, 48);
+        btnSair.setBounds(307, 321, 171, 48);
         contentPane.add(btnSair);
         this.setLocationRelativeTo(null);
     }
