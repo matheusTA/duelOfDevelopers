@@ -52,13 +52,13 @@ public class TelaFinal extends JFrame {
 		lblStatusdojogo.setText(this.status);
 		
 		JLabel lblDadosjogador01 = new JLabel("dadosJogador01");
-		lblDadosjogador01.setFont(new Font("Dialog", Font.BOLD, 24));
+		lblDadosjogador01.setFont(new Font("Dialog", Font.BOLD, 20));
 		lblDadosjogador01.setBounds(85, 224, 241, 208);
 		contentPane.add(lblDadosjogador01);
 		lblDadosjogador01.setText(jogador01.toString() + "<br>Pontos: " + jogador01.getPontos());
 		
 		JLabel lblDadosjogador02 = new JLabel("dadosJogador02");
-		lblDadosjogador02.setFont(new Font("Dialog", Font.BOLD, 24));
+		lblDadosjogador02.setFont(new Font("Dialog", Font.BOLD, 20));
 		lblDadosjogador02.setBounds(375, 224, 241, 208);
 		contentPane.add(lblDadosjogador02);
 		lblDadosjogador02.setText(jogador02.toString() + "<br>Pontos: " + jogador02.getPontos());

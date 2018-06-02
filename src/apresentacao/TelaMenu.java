@@ -10,6 +10,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
 
 public class TelaMenu extends JFrame implements Serializable {
 
@@ -71,6 +72,11 @@ public class TelaMenu extends JFrame implements Serializable {
         btnSair.setFont(new Font("Bahnschrift", Font.PLAIN, 20));
         btnSair.setBounds(307, 321, 171, 48);
         contentPane.add(btnSair);
+        
+        JLabel lblDuelOfDevelopers = new JLabel("Duel Of Developers");
+        lblDuelOfDevelopers.setFont(new Font("Dialog", Font.BOLD, 25));
+        lblDuelOfDevelopers.setBounds(251, 51, 330, 83);
+        contentPane.add(lblDuelOfDevelopers);
         this.setLocationRelativeTo(null);
     }
 

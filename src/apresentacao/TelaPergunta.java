@@ -1,5 +1,6 @@
 package apresentacao;
 
+import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
@@ -41,7 +42,7 @@ public class TelaPergunta extends JFrame {
 		controllerPergunta = new ControllerPergunta();
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 798, 597);
+		setBounds(100, 100, 800, 620);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -164,6 +165,13 @@ public class TelaPergunta extends JFrame {
 
 	private void exibirJogador(Jogador jogador) {
 		this.lblDadosjogador.setText(jogador.toString());
+		if(jogador == this.jogador01) {
+			Color corJogador01 = new Color(135, 206, 235);
+			contentPane.setBackground(corJogador01);
+		}else {
+			Color corJogador02 = new Color(255, 182, 193);
+			contentPane.setBackground(corJogador02);
+		}
 	}
 
 	private boolean isUltimaPergunta() {

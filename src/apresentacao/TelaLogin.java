@@ -38,31 +38,31 @@ public class TelaLogin extends JFrame {
 
         JLabel lblJogador = new JLabel("Jogador 1");
         lblJogador.setFont(new Font("Bahnschrift", Font.PLAIN, 30));
-        lblJogador.setBounds(87, 32, 123, 41);
+        lblJogador.setBounds(87, 32, 184, 41);
         contentPane.add(lblJogador);
 
         JLabel lblJogador_1 = new JLabel("Jogador 2");
         lblJogador_1.setFont(new Font("Bahnschrift", Font.PLAIN, 30));
-        lblJogador_1.setBounds(518, 32, 129, 41);
+        lblJogador_1.setBounds(518, 32, 180, 41);
         contentPane.add(lblJogador_1);
 
         JLabel lblLogin01 = new JLabel("Login:");
         lblLogin01.setFont(new Font("Bahnschrift", Font.PLAIN, 20));
-        lblLogin01.setBounds(10, 144, 61, 25);
+        lblLogin01.setBounds(10, 144, 94, 25);
         contentPane.add(lblLogin01);
 
         JLabel lblSenha01 = new JLabel("Senha:");
         lblSenha01.setFont(new Font("Bahnschrift", Font.PLAIN, 20));
-        lblSenha01.setBounds(10, 218, 61, 25);
+        lblSenha01.setBounds(10, 218, 82, 25);
         contentPane.add(lblSenha01);
 
         txtLogin01 = new JTextField();
-        txtLogin01.setBounds(65, 144, 262, 25);
+        txtLogin01.setBounds(87, 146, 262, 25);
         contentPane.add(txtLogin01);
         txtLogin01.setColumns(10);
 
         txtSenha01 = new JPasswordField();
-        txtSenha01.setBounds(71, 218, 262, 25);
+        txtSenha01.setBounds(87, 220, 262, 25);
         contentPane.add(txtSenha01);
         txtSenha01.setColumns(10);
 
@@ -80,21 +80,21 @@ public class TelaLogin extends JFrame {
 
         JLabel lblLogin02 = new JLabel("Login:");
         lblLogin02.setFont(new Font("Bahnschrift", Font.PLAIN, 20));
-        lblLogin02.setBounds(433, 144, 61, 25);
+        lblLogin02.setBounds(433, 144, 82, 25);
         contentPane.add(lblLogin02);
 
         txtLogin02 = new JTextField();
-        txtLogin02.setBounds(489, 144, 262, 25);
+        txtLogin02.setBounds(504, 146, 262, 25);
         contentPane.add(txtLogin02);
         txtLogin02.setColumns(10);
 
         JLabel lblSenha02 = new JLabel("Senha:");
         lblSenha02.setFont(new Font("Bahnschrift", Font.PLAIN, 20));
-        lblSenha02.setBounds(426, 214, 61, 25);
+        lblSenha02.setBounds(426, 214, 82, 25);
         contentPane.add(lblSenha02);
 
         txtSenha02 = new JPasswordField();
-        txtSenha02.setBounds(489, 214, 262, 25);
+        txtSenha02.setBounds(504, 214, 262, 25);
         contentPane.add(txtSenha02);
         txtSenha02.setColumns(10);
 
@@ -152,7 +152,7 @@ public class TelaLogin extends JFrame {
             jogador = controllerJogador.pegar(login.getText(), senha.getText());
             if (jogador != null) {
                 jogadorLogado = jogador;
-                JOptionPane.showMessageDialog(null, "Jogador " + i + " logado com socesso");
+                JOptionPane.showMessageDialog(null, "Jogador " + i + " logado com sucesso");
                 return jogadorLogado;
             } else {
                 JOptionPane.showMessageDialog(null, "Login ou senha incorreta, tente novamente.");
