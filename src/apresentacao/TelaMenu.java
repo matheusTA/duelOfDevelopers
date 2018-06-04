@@ -11,6 +11,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import java.awt.Color;
 
 public class TelaMenu extends JFrame implements Serializable {
 
@@ -39,6 +40,7 @@ public class TelaMenu extends JFrame implements Serializable {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 792, 503);
         contentPane = new JPanel();
+        contentPane.setBackground(new Color(255, 228, 196));
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
         contentPane.setLayout(null);
