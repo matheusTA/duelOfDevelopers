@@ -33,12 +33,11 @@ public class TelaPergunta extends JFrame {
 	private JLabel opcaoA;
 	private JLabel opcaoB;
 
-	public TelaPergunta(Jogador jogador01, Jogador jogador02)  {
+	public TelaPergunta(Jogador jogador01, Jogador jogador02) {
 
 		this.jogador01 = jogador01;
 		this.jogador02 = jogador02;
 
-		
 		controllerPergunta = new ControllerPergunta();
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -100,7 +99,7 @@ public class TelaPergunta extends JFrame {
 	}
 
 	private Jogador retornarJogadorDaVez() {
-		return TelaPergunta.contadorDePerguntas % 2 == 0 ? this.jogador01 : this.jogador02;
+		return this.contadorDePerguntas % 2 == 0 ? this.jogador01 : this.jogador02;
 	}
 
 	private void exibirPergunta(Pergunta pergunta) {
@@ -127,15 +126,15 @@ public class TelaPergunta extends JFrame {
 
 	}
 
-	private void exibirProximaPergunta(JLabel JLtexto) throws ClassNotFoundException, IOException { 
-		if(isUltimaPergunta()) {
+	private void exibirProximaPergunta(JLabel JLtexto) throws ClassNotFoundException, IOException {
+		if (isUltimaPergunta()) {
 			trocaTelaFinal(this.jogador01, this.jogador02);
-		}else {
+		} else {
 			this.perguntaAtual = this.controllerPergunta.selecionarPergunta(this.contadorDePerguntas, this.perguntas);
 			exibirPergunta(this.perguntaAtual);
-			addContadorPerguntas();	
+
 		}
-		
+
 	}
 
 	private void addContadorPerguntas() {
@@ -148,27 +147,30 @@ public class TelaPergunta extends JFrame {
 
 	private void verificaResposta(int resposta) throws ClassNotFoundException, IOException {
 		boolean resultadoDaResposta = controllerPergunta.respostaCorreta(this.perguntaAtual, resposta);
+		Jogador play = retornarJogadorDaVez();
 
 		if (resultadoDaResposta == true) {
-			if (retornarJogadorDaVez() == this.jogador01) {
+			if (play.getNome() == this.jogador01.getNome()) {
 				this.jogador01.setPontos(this.jogador01.getPontos() + 1);
 
 			} else {
 				this.jogador02.setPontos(this.jogador02.getPontos() + 1);
 
 			}
+			addContadorPerguntas();
 			exibirProximaPergunta(this.JLperguntas);
 		} else {
+			addContadorPerguntas();
 			exibirProximaPergunta(this.JLperguntas);
 		}
 	}
 
 	private void exibirJogador(Jogador jogador) {
 		this.lblDadosjogador.setText(jogador.toString());
-		if(jogador == this.jogador01) {
+		if (jogador == this.jogador01) {
 			Color corJogador01 = new Color(135, 206, 235);
 			contentPane.setBackground(corJogador01);
-		}else {
+		} else {
 			Color corJogador02 = new Color(255, 182, 193);
 			contentPane.setBackground(corJogador02);
 		}
@@ -177,11 +179,11 @@ public class TelaPergunta extends JFrame {
 	private boolean isUltimaPergunta() {
 		return this.perguntaAtual == this.perguntas[this.perguntas.length - 1];
 	}
-	
+
 	private void trocaTelaFinal(Jogador jogador01, Jogador jogador02) throws ClassNotFoundException, IOException {
-		 this.setVisible(false);
-		 TelaFinal telaFinal = new TelaFinal(jogador01, jogador02);
-		 telaFinal.show();
+		this.setVisible(false);
+		TelaFinal telaFinal = new TelaFinal(jogador01, jogador02);
+		telaFinal.show();
 	}
-	
+
 }
